@@ -25,7 +25,7 @@ function shortestOf(strings) {
 }
 
 function fractionWithPi(value, πTop, πBottom) {
-  var fraction = number2Fraction(value);
+  var fraction = String(number2Fraction(value));
   var a = fraction.split(/[\/\u2044]/);
   var numerator = removeOne(a[0], πTop) || '1';
   var denominator = removeOne(a[1], πBottom);

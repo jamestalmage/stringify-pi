@@ -40,4 +40,5 @@ describe('stringify-pi', function () {
   test(1 / 2, '1/2');
 
   test('3', '3');
+  test(0, '0');
 });
