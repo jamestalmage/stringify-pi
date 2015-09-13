@@ -1,7 +1,7 @@
 {
   "name": "stringify-pi",
   "version": "0.0.2",
-  "description": "My swell module",
+  "description": "Stringify number values that might be multiples of π",
   "license": "MIT",
   "repository": "jamestalmage/stringify-pi",
   "author": {

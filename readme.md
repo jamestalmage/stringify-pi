@@ -1,6 +1,6 @@
 # stringify-pi 
 
-My swell module
+Stringify number values that might be multiples of π.
 
 [![Build Status](https://travis-ci.org/jamestalmage/stringify-pi.svg?branch=master)](https://travis-ci.org/jamestalmage/stringify-pi)
 [![Coverage Status](https://coveralls.io/repos/jamestalmage/stringify-pi/badge.svg?branch=master&service=github)](https://coveralls.io/github/jamestalmage/stringify-pi?branch=master)
@@ -14,31 +14,41 @@ My swell module
 
 ```js
 var stringifyPi = require('stringify-pi');
+var π = Math.PI;
 
-stringifyPi('unicorns');
-//=> 'unicorns & rainbows'
+stringifyPi(3 / π);
+//=> '3/π'
+
+stringifyPi(π / 3);
+//=> 'π/3'
+
+stringifyPi(2 * π / 3);
+//=> '2π/3'
+
+stringifyPi(2 * π);
+//=> '2π'
+
+// works on normal fractions too
+stringifyPi(2/3);
+//=> '2/3'
 ```
 
 
 ## API
 
-### stringifyPi(input, [options])
+### stringifyPi(input)
 
 #### input
 
-Type: `string`
+*Required*
+Type: `number`
 
-Lorem ipsum.
+A number that might be a (fractional) multiple of π.
 
-#### options
+#### returns
 
-##### foo
-
-Type: `boolean`  
-Default: `false`
-
-Lorem ipsum.
-
+A `String` representation of the input. If a reasonable estimation of a fractional value
+or fractional multiple of π can be found, the string will contain the `π` character. 
 
 ## License
 
