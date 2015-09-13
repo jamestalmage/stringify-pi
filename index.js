@@ -7,28 +7,44 @@ function stringifyPi(value) {
   if (typeof value !== 'number') {
     return value;
   }
-  var fraction = number2Fraction(value / π);
-  var valueStr = String(value);
+  return shorestOf([
+    fractionWithPi(value / π, true, false),
+    fractionWithPi(value * π, false, true),
+    number2Fraction(value),
+    String(value)
+  ]);
+}
 
-  // If reducing it to a fraction makes the string longer,
-  // it likely did not have π in it.
-  if (fraction.length > valueStr.length) {
-    return valueStr;
-  }
+function shorestOf(strings) {
+  return strings.reduce(function (prev, current) {
+    if (prev.length <= current.length) {
+      return prev;
+    }
+    return current;
+  });
+}
 
+function fractionWithPi(value, πTop, πBottom) {
+  var fraction = number2Fraction(value);
   var a = fraction.split(/[\/\u2044]/);
-  return removeOne(a[0]) + 'π' + removeOne(a[1], '/');
+  var numerator = removeOne(a[0], πTop) || '1';
+  var denominator = removeOne(a[1], πBottom);
+
+  if (denominator) {
+    return numerator + '/' + denominator;
+  }
+  return numerator;
 }
 
 // '1'  ==> ''  (empty string)
 // '-1' ==> '-'
-function removeOne(str, prefix) {
+function removeOne(str, isPi) {
   if (str === '1') {
-    return '';
+    return isPi ? 'π' : '';
   }
-  if (str === '-1') {
-    return '-';
+  if (isPi && str === '-1') {
+    return '-π';
   }
-  return prefix ? prefix + str : str;
+  return isPi ? str + 'π' : str;
 }
 

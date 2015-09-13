@@ -4,20 +4,40 @@ var sp = require('../');
 var π = Math.PI;
 
 describe('stringify-pi', function () {
-  it('must be equal', function () {
-    assert.strictEqual(sp(2 * π / 3), '2π/3');
-    assert.strictEqual(sp(π / 3), 'π/3');
-    assert.strictEqual(sp(-π / 3), '-π/3');
-    assert.strictEqual(sp(4 * π / 3), '4π/3');
-    assert.strictEqual(sp(523 * π / 100), '523π/100');
-    assert.strictEqual(sp(5023 * π / 100), '5023π/100');
-    assert.strictEqual(sp(5023 * π / 1000), '5023π/1000');
-    assert.strictEqual(sp(50237 * π / 1000), '50237π/1000');
-    assert.strictEqual(sp(50237 * π / 10000), '50237π/10000');
-    assert.strictEqual(sp(502379 * π / 10000), '502379π/10000');
-    assert.strictEqual(sp(502379 * π / 100000), '502379π/100000');
-    assert.strictEqual(sp(502379 * π / 1000000), '502379π/1000000');
+  function test(val, exp) {
+    it(exp, function () {
+      assert.strictEqual(sp(val), exp);
+    });
+  }
 
-    assert.strictEqual(sp(3 * π), '3π');
-  });
+  test(π, 'π');
+  test(3 * π, '3π');
+
+  test(2 * π / 3, '2π/3');
+  test(π / 3, 'π/3');
+  test(-π / 3, '-π/3');
+  test(4 * π / 3, '4π/3');
+  test(523 * π / 100, '523π/100');
+  test(5023 * π / 100, '5023π/100');
+  test(5023 * π / 1000, '5023π/1000');
+  test(50237 * π / 1000, '50237π/1000');
+  test(50237 * π / 10000, '50237π/10000');
+  test(502379 * π / 10000, '502379π/10000');
+  test(502379 * π / 1000000, '502379π/1000000');
+
+  test(1 / π, '1/π');
+  test(-1 / π, '-1/π');
+
+  test(523 / (100 * π), '523/100π');
+  test(5023 / (100 * π), '5023/100π');
+  test(5023 / (1000 * π), '5023/1000π');
+  test(50237 / (1000 * π), '50237/1000π');
+  test(50237 / (10000 * π), '50237/10000π');
+  test(502379 / (10000 * π), '502379/10000π');
+  test(502379 / (1000000 * π), '502379/1000000π');
+
+  test(1 / 3, '1/3');
+  test(1 / 2, '1/2');
+
+  test('3', '3');
 });
