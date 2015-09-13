@@ -7,7 +7,7 @@ function stringifyPi(value) {
   if (typeof value !== 'number') {
     return value;
   }
-  return shorestOf([
+  return shortestOf([
     fractionWithPi(value / π, true, false),
     fractionWithPi(value * π, false, true),
     number2Fraction(value),
@@ -15,7 +15,7 @@ function stringifyPi(value) {
   ]);
 }
 
-function shorestOf(strings) {
+function shortestOf(strings) {
   return strings.reduce(function (prev, current) {
     if (prev.length <= current.length) {
       return prev;
