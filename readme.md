@@ -1,8 +1,8 @@
 # stringify-pi 
 [![XO code style](https://shields.io/badge/code_style-5ed9c7?logo=xo&labelColor=gray)](https://github.com/xojs/xo)
-[![Build Test Status](https://github.com/dudleycarr/stringify-pi/actions/workflows/ci.yml/badge.svg)](https://github.com/dudleycarr/stringify-pi/actions/workflows/ci.yml)
-[![Coverage Status](https://coveralls.io/repos/github/dudleycarr/stringify-pi/badge.svg?branch=main)](https://coveralls.io/github/dudleycarr/stringify-pi?branch=main)
-[![Maintainability](https://api.codeclimate.com/v1/badges/aa3d4fb738d3d1059d04/maintainability)](https://codeclimate.com/github/dudleycarr/stringify-pi/maintainability)
+[![Build Test Status](https://github.com/jamestalmage/stringify-pi/actions/workflows/ci.yml/badge.svg)](https://github.com/jamestalmage/stringify-pi/actions/workflows/ci.yml)
+[![Coverage Status](https://coveralls.io/repos/github/jamestalmage/stringify-pi/badge.svg?branch=main)](https://coveralls.io/github/jamestalmage/stringify-pi?branch=main)
+[![Maintainability](https://codeclimate.com/github/jamestalmage/stringify-pi/badges/gpa.svg)](https://codeclimate.com/github/jamestalmage/stringify-pi)
 
 Stringify number values that might be multiples of π.
 

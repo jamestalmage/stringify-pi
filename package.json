@@ -1,9 +1,9 @@
 {
-  "name": "@dudley/stringify-pi",
+  "name": "stringify-pi",
   "version": "1.0.0",
   "description": "Stringify number values that might be multiples of π",
   "license": "MIT",
-  "repository": "dudleycarr/stringify-pi",
+  "repository": "jamestalmage/stringify-pi",
   "author": {
     "name": "James Talmage",
     "email": "james@talmage.io",
