@@ -1,7 +1,7 @@
 # stringify-pi 
 [![XO code style](https://shields.io/badge/code_style-5ed9c7?logo=xo&labelColor=gray)](https://github.com/xojs/xo)
 [![Build Test Status](https://github.com/jamestalmage/stringify-pi/actions/workflows/ci.yml/badge.svg)](https://github.com/jamestalmage/stringify-pi/actions/workflows/ci.yml)
-[![Coverage Status](https://coveralls.io/repos/github/jamestalmage/stringify-pi/badge.svg?branch=main)](https://coveralls.io/github/jamestalmage/stringify-pi?branch=main)
+[![Coverage Status](https://coveralls.io/repos/github/jamestalmage/stringify-pi/badge.svg?branch=master)](https://coveralls.io/github/jamestalmage/stringify-pi?branch=master)
 [![Maintainability](https://codeclimate.com/github/jamestalmage/stringify-pi/badges/gpa.svg)](https://codeclimate.com/github/jamestalmage/stringify-pi)
 
 Stringify number values that might be multiples of π.
