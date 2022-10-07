@@ -1,6 +1,6 @@
 {
-  "name": "@dudleycarr/stringify-pi",
-  "version": "1.0.0",
+  "name": "@dudley/stringify-pi",
+  "version": "0.0.3",
   "description": "Stringify number values that might be multiples of π",
   "license": "MIT",
   "repository": "dudleycarr/stringify-pi",
@@ -22,7 +22,8 @@
     "cover": "nyc --reporter=lcov --reporter=text --reporter=html ava",
     "lint": "xo",
     "debug": "ava",
-    "watch": "ava -w"
+    "watch": "ava -w",
+    "publish": "npm run build && np"
   },
   "main": "./index.js",
   "exports": {
@@ -33,6 +34,16 @@
     }
   },
   "types": "./dist/index.d.ts",
+  "files": [
+    "index.js",
+    "dist/index.js",
+    "dist/index.js.map",
+    "dist/index.mjs.map",
+    "dist/index.mjs.map",
+    "dist/index.d.ts",
+    "license",
+    "readme.md"
+  ],
   "keywords": [
     "pi"
   ],
