@@ -1,7 +1,10 @@
 *.log
-/coverage/
-/node_modules/
 /.idea/
+/.nyc_output
+/build/
+/coverage/
+/dist
+/node_modules/
+/package-lock.json
 /sandbox.*
 /sandbox/
-/build/
