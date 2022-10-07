@@ -1,6 +1,6 @@
 {
   "name": "@dudley/stringify-pi",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "description": "Stringify number values that might be multiples of π",
   "license": "MIT",
   "repository": "dudleycarr/stringify-pi",
