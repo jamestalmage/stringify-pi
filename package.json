@@ -16,8 +16,8 @@
     "node": ">=10"
   },
   "scripts": {
-    "build": "del-cli dist && tsup ./source/index.ts --dts --sourcemap --format esm,cjs" ,
-    "test": "tsc --noEmit && nyc ava",
+    "build": "del-cli dist && tsup ./source/index.ts --dts --sourcemap --format esm,cjs",
+    "test": "tsc --noEmit && npm run lint && nyc ava",
     "test-ci": "npm run test && nyc report --reporter=text-lcov",
     "cover": "nyc --reporter=lcov --reporter=text --reporter=html ava",
     "lint": "xo",
@@ -91,6 +91,13 @@
     "envs": [
       "node"
     ],
-    "prettier": true
+    "ignores": [
+      "index.js"
+    ],
+    "prettier": true,
+    "rules": {
+      "import/extensions": "off",
+      "unicorn/numeric-separators-style": "off"
+    }
   }
 }
